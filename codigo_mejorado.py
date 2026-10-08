@@ -24,11 +24,14 @@ def pedir_real(mensaje, minimo, maximo):
     while True:
         try:
             valor = float(input(mensaje))
+
             if minimo <= valor <= maximo:
                 return valor
+
             print(f"Error: ingrese un valor entre {minimo} y {maximo}.")
+
         except ValueError:
-            print("Error: debe ingresar un número válido.")
+            print("Error: debe ingresar un número válido. Intente nuevamente.")
 
 
 def mostrar_informacion(nombre, edad, nota):
